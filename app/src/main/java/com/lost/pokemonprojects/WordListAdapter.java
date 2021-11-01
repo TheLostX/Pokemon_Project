@@ -45,9 +45,10 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
 
         if (position == 1) {
             binding.descripcion.setText("Este es un pokemon de hierba");
-            binding.wordItemTv.setText("BULBASOUR");
+            binding.wordItemTv.setText("BULBASAUR");
             binding.ivPokemon.setImageDrawable(binding.getRoot().getContext().getDrawable(R.drawable.bulbasour));
         }
+
         if (position == 2) {
             binding.wordItemTv.setText("SQUIRTLE");
             binding.descripcion.setText("Este es un pokemon de agua");
@@ -68,25 +69,9 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
             @Override
             public void onClick(View v) {
 
-                if (holder.getAdapterPosition() == 0) {
-                    Toast.makeText(binding.ivPokemon.getContext(), holder.wordItemTv.getText().toString(), Toast.LENGTH_SHORT).show();
-                }
-                else if (holder.getAdapterPosition() == 1) {
-                    Toast.makeText(binding.ivPokemon.getContext(), holder.wordItemTv.getText().toString(), Toast.LENGTH_SHORT).show();
-                }
-                else if (holder.getAdapterPosition() ==2 ){
-                    Toast.makeText(binding.ivPokemon.getContext(), holder.wordItemTv.getText().toString(), Toast.LENGTH_SHORT).show();
-                }
-                else if (holder.getAdapterPosition() ==3 ){
-                    Toast.makeText(binding.ivPokemon.getContext(), holder.wordItemTv.getText().toString(), Toast.LENGTH_SHORT).show();
-                }
-                else if (holder.getAdapterPosition() ==4 ){
-                    Toast.makeText(binding.ivPokemon.getContext(), holder.wordItemTv.getText().toString(), Toast.LENGTH_SHORT).show();
-                }
+                Toast.makeText(binding.ivPokemon.getContext(), holder.wordItemTv.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
     @Override
